@@ -5,6 +5,7 @@ Also make any necessary adjustments to make this app accessible. */
 
 function getDataFromApi(artist, title, callback) 
 {
+	console.log(`the artist and title in getData are ${artist}, ${title}`);
   $.ajax(
   {
   	type: 'GET',
