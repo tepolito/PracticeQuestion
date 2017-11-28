@@ -33,7 +33,7 @@ function watchSubmit()
   	let song = $(event.currentTarget).find('.js-query-title').val();
   	console.log(`the song is ${song}`);
 
-  	if(artist && song != null)
+  	if(artist != false && song != false)
   	{
   		getDataFromApi(artist,song,displaySearchData);
   	} 
