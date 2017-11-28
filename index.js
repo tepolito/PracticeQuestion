@@ -5,12 +5,20 @@ Also make any necessary adjustments to make this app accessible. */
 
 function getDataFromApi(artist, title, callback) 
 {
-  //your code here
+  $.ajax(
+  {
+  	type: 'GET',
+  	url: "https://api.lyrics.ovh/v1/artist/title",
+  	success: callback,
+
+  	dataType: "json"
+  })
 }
 
 function displaySearchData(data) 
 {
-  //your code here
+	console.log(data);
+  $('.js-search-results').append(data.lyrics);
 }
 
 function watchSubmit() 
@@ -25,7 +33,7 @@ function watchSubmit()
   	let song = $(event.currentTarget).find('.js-query-title').val();
   	console.log(`the song is ${song}`);
 
-  	if(artist && song != undefined)
+  	if(artist && song != null)
   	{
   		getDataFromApi(artist,song,displaySearchData);
   	} 
