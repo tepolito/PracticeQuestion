@@ -13,17 +13,29 @@
     <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Song Lyrics</h1>
-    <form action="#" class="js-search-form">
-        <span>Artist:</span>
-        <input type="text" class="js-query-artist" placeholder="Queen">
-        <span>Song title:</span>
-        <input type="text" class="js-query-title" placeholder="Under Pressure">
-        <button type="submit">Search</button>
-    </form>
-    <div class="js-search-results">
-            
-    </div>
+    <header role="banner">
+      <h1>Song Lyrics</h1>
+    </header>
+    
+    <main role="main">
+      <section role="search">
+        <form action="#" class="js-search-form">
+          <span>Artist:</span>
+          <input type="text" class="js-query-artist" placeholder="Queen">
+          <span>Song title:</span>
+          <input type="text" class="js-query-title" placeholder="Under Pressure">
+          <button type="submit">Search</button>
+        </form>
+      </section>
+      
+      <section>
+        <h2>Lyric Results:</h2>
+        <div class="js-search-results">      
+        </div>
+      </section>
+    </main>
+    
+    
     <script src="index.js"></script>
   </body>
 </html>
