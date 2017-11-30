@@ -9,7 +9,7 @@ function getDataFromApi(artist, title, callback)
   $.ajax(
   {
   	type: 'GET',
-  	url: "https://api.lyrics.ovh/v1/artist/title",
+  	url: `https://api.lyrics.ovh/v1/${artist}/${title}`,
   	success: callback,
 
   	dataType: "json"
@@ -19,7 +19,7 @@ function getDataFromApi(artist, title, callback)
 function displaySearchData(data) 
 {
 	console.log(data);
-  $('.js-search-results').append(data.lyrics);
+  $('.js-search-results').html(data.lyrics);
 }
 
 function watchSubmit() 
